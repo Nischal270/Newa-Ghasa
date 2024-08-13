@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character encoding and viewport settings for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Newa Ghasa - Menu</title>
+    
+    <!-- Link to Bootstrap CSS for styling and responsive layout -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Link to Google Fonts for custom typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Link to Font Awesome for icon usage -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- Link to custom CSS file for additional styling -->
+    <link rel="stylesheet" href="../css/menu.css">
+    
+    <!-- Internal style block for additional styles (empty for now) -->
+    <style>
+        /* Additional custom styles can be added here */
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Brand name and link to the homepage -->
+        <a class="navbar-brand" href="index.html">Newa Ghasa</a>
+        
+        <!-- Toggler for mobile view -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Collapsible menu items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Nav_links/about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Nav_links/signup.html">Sign Up</a></li>
+            </ul>
+            <!-- Button to toggle light and dark themes -->
+            <button class="theme-toggle btn btn-outline-light ml-3" onclick="toggleTheme()">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero">
+        <!-- Hero text for the menu section -->
+        <h2 class="text-center">Our Menu</h2>
+        <p class="text-center">Discover our delicious offerings.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Menu Section -->
+        <section id="menu" class="section">
+            <div class="container">
+                <div class="row">
+                    <!-- First Menu Item -->
+                    <div class="col-md-4">
+                        <div class="card menu-item">
+                            <img src="../DishPhoto/chang.jpeg" alt="Chang Picture" class="food-image card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Chang</h4>
+                                <p>Price: $5.00</p>
+                                <!-- Quantity input for the item -->
+                                <p>Quantity: <input type="number" class="quantity-input" data-price="5.00" value="1" min="1" style="width: 50px;"></p>
+                                <!-- Button to add item to cart -->
+                                <button class="btn btn-order add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Second Menu Item -->
+                    <div class="col-md-4">
+                        <div class="card menu-item">
+                            <img src="../DishPhoto/choila.jpeg" alt="Choila Picture" class="food-image card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Choila</h4>
+                                <p>Price: $7.00</p>
+                                <!-- Quantity input for the item -->
+                                <p>Quantity: <input type="number" class="quantity-input" data-price="7.00" value="1" min="1" style="width: 50px;"></p>
+                                <!-- Button to add item to cart -->
+                                <button class="btn btn-order add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Third Menu Item -->
+                    <div class="col-md-4">
+                        <div class="card menu-item">
+                            <img src="../DishPhoto/Supu_Mhicha.jpeg" alt="Supu Mhicha Picture" class="food-image card-img-top">
+                            <div class="card-body text-center">
+                                <h4 class="card-title">Supu Mhicha</h4>
+                                <p>Price: $10.00</p>
+                                <!-- Quantity input for the item -->
+                                <p>Quantity: <input type="number" class="quantity-input" data-price="10.00" value="1" min="1" style="width: 50px;"></p>
+                                <!-- Button to add item to cart -->
+                                <button class="btn btn-order add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Summary Section -->
+        <section class="cart-summary">
+            <h4>Your Order</h4>
+            <!-- List for cart items, will be populated dynamically -->
+            <ul id="cart-items" class="list-unstyled"></ul>
+            <p>Total Amount: $<span id="cart-total">0.00</span></p>
+            <!-- Buttons to place order and view receipt -->
+            <button class="btn btn-place-order" id="place-order-button">Place Order</button>
+            <button class="btn btn-secondary mt-2" id="view-receipt-button">View Receipt</button>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: <a href="mailto:nischalshrestha616@gmail.com">nischalshrestha616@gmail</a></p>
+                    <p>Phone: (+977 9866731377)</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <div class="quick-links">
+                        <ul class="list-unstyled">
+                            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                            <li><a href="Nav_links/menu.html"><i class="fas fa-utensils"></i>Menu</a></li>
+                            <li><a href="Nav_links/about.html"><i class="fas fa-info-circle"></i>About Us</a></li>
+                            <li><a href="#testimonials"><i class="fas fa-star"></i>Testimonials</a></li>
+                            <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+                            <li><a href="Nav_links/signup.html"><i class="fas fa-user-plus"></i>Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/people/Nischal-Shrestha/pfbid02kSSKwcw9bC6w6yV15bHU8KmK73LEuwHo8fC7CYm6JNniYi17GyjvP5p9Z72GN9Lrl/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/nischalshrestha2023?igsh=MXRtMHp5MXRicTBseg=="><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Copyright notice -->
+                    <p>&copy; 2024 Newa Ghasa. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to toggle between light and dark themes
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? '🌙' : '🌞';
+        }
+
+        // DOMContentLoaded event ensures scripts run after the document is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set theme based on user's preference
+            const userPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', userPreference);
+            document.querySelector('.theme-toggle').textContent = userPreference === 'dark' ? '🌙' : '🌞';
+
+            const cartItems = [];
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            const cartTotalElement = document.getElementById('cart-total');
+            const cartItemsList = document.getElementById('cart-items');
+            let cartTotal = 0;
+
+            // Event listener to update the total price when quantity changes
+            quantityInputs.forEach(input => {
+                input.addEventListener('input', (event) => {
+                    const inputElement = event.target;
+                    const price = parseFloat(inputElement.getAttribute('data-price'));
+                    const quantity = parseInt(inputElement.value);
+                    const totalAmount = (price * quantity).toFixed(2);
+                });
+            });
+
+            // Event listener to add items to the cart when "Add to Cart" is clicked
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const cardBody = event.target.closest('.card-body');
+                    const title = cardBody.querySelector('.card-title').textContent;
+                    const quantityInput = cardBody.querySelector('.quantity-input');
+                    const price = parseFloat(quantityInput.getAttribute('data-price'));
+                    const quantity = parseInt(quantityInput.value);
+                    const total = price * quantity;
+
+                    cartTotal += total;
+                    cartTotalElement.textContent = cartTotal.toFixed(2);
+
+                    // Update cartItems array and UI
+                    const existingItem = cartItems.find(item => item.title === title);
+                    if (existingItem) {
+                        existingItem.quantity += quantity;
+                        existingItem.total = existingItem.quantity * price;
+                    } else {
+                        cartItems.push({ title, quantity, total });
+                    }
+
+                    updateCartItemsList();
+                });
+            });
+
+            // Function to update the cart items list in the UI
+            const updateCartItemsList = () => {
+                cartItemsList.innerHTML = '';
+                cartItems.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${item.title} - Quantity: ${item.quantity} - Total: $${item.total.toFixed(2)}`;
+                    cartItemsList.appendChild(listItem);
+                });
+            };
+
+            // Event listener to place the order
+            document.getElementById('place-order-button').addEventListener('click', () => {
+                if (cartTotal > 0) {
+                    alert('Your order has been placed!');
+                    cartItems.length = 0; // Clear cart items
+                    cartTotal = 0;
+                    cartTotalElement.textContent = '0.00';
+                    updateCartItemsList();
+                } else {
+                    alert('Please add some products to the cart before placing an order.');
+                }
+            });
+
+            // Event listener to view receipt
+            document.getElementById('view-receipt-button').addEventListener('click', () => {
+                if (cartItems.length === 0) {
+                    alert('Your cart is empty.');
+                } else {
+                    let receipt = 'Receipt:\n\n';
+                    cartItems.forEach(item => {
+                        receipt += `${item.title} - Quantity: ${item.quantity} - Total: $${item.total.toFixed(2)}\n`;
+                    });
+                    receipt += `\nTotal Amount: $${cartTotal.toFixed(2)}`;
+                    alert(receipt);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

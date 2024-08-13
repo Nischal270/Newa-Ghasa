@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Responsive design: adjusts the layout based on device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page displayed in the browser tab -->
+    <title>About Us - Newa Ghasa</title>
+    <!-- Bootstrap CSS for styling and responsive design -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for custom typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS file for additional styles specific to the About Us page -->
+    <link href="../css/about.css" rel="stylesheet">
+    <!-- Inline styles can be added here (currently empty) -->
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar with links and theme toggle button -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Brand name with a link to the homepage -->
+        <a class="navbar-brand" href="index.html">Newa Ghasa</a>
+        <!-- Button for toggling the navbar on small screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible part of the navbar -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <!-- Navigation links -->
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Nav_links/menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Nav_links/signup.html">Sign Up</a></li>
+            </ul>
+            <!-- Button to toggle between light and dark themes -->
+            <button class="theme-toggle btn btn-outline-light ml-3" onclick="toggleTheme()">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero section with a background image or color -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <!-- Heading and subheading for the hero section -->
+            <h2>About Us</h2>
+            <p>Discover the story behind Newa Ghasa.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- History section describing the background of the restaurant -->
+        <section id="history" class="section">
+            <div class="container">
+                <h2 class="text-center">Our History</h2>
+                <p class="text-center">
+					Newa Ghasa has been serving authentic Nepali cuisine for over a decade. Founded by passionate food lovers, our restaurant brings together 
+					traditional recipes and modern techniques to offer an unforgettable dining experience.
+				</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Potential space for an image or additional content -->
+                    </div>
+                    <div class="text-center">
+                        <!-- Additional history content -->
+                        <p>
+							Our journey began with a small food stall in the heart of Kathmandu. Over the years, we expanded to a full-fledged restaurant,
+							gaining a loyal following and recognition for our dedication to preserving the rich culinary heritage of Nepal. Our team continues to strive
+							for excellence, bringing you dishes that are both authentic and innovative.
+						</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission section outlining the restaurant's goals and values -->
+        <section id="mission" class="section">
+            <div class="container">
+                <h2 class="text-center">Our Mission</h2>
+                <p class="text-center">
+					At Newa Ghasa, our mission is to provide a dining experience that celebrates the vibrant flavors and traditions of Nepali cuisine.
+					We are committed to using high-quality ingredients and traditional cooking methods to create dishes that honor the cultural heritage of Nepal.
+				</p>
+                <p class="text-center">
+					We believe in fostering a warm and welcoming environment where our guests can enjoy authentic Newari dishes, share stories, and create lasting 
+					memories. Our dedication to excellence in both food and service is at the heart of everything we do.
+				</p>
+            </div>
+        </section>
+
+        <!-- Team section introducing key team members -->
+        <section id="team" class="section">
+            <div class="container">
+                <h2 class="text-center">Meet Our Team</h2>
+                <div class="row">
+                    <!-- Team member 1 -->
+                    <div class="col-md-4">
+                        <div class="team-member text-center">
+                            <h4 class="mt-2">Chef Shyam Kumar Saru</h4>
+                            <p>Head Chef</p>
+                            <p>
+								With over 20 years of experience in Nepali cuisine, Chef Shyam Kumar Saru leads our kitchen with passion and expertise, 
+								ensuring every dish is crafted to perfection.
+							</p>
+                        </div>
+                    </div>
+                    <!-- Team member 2 -->
+                    <div class="col-md-4">
+                        <div class="team-member text-center">
+                            <h4 class="mt-2">Kabiraj Shrestha</h4>
+                            <p>Restaurant Manager</p>
+                            <p>
+								Kabiraj Shrestha ensures that every aspect of our restaurant runs smoothly, from guest service to daily operations, providing
+								a memorable dining experience for all our guests.
+							</p>
+                        </div>
+                    </div>
+                    <!-- Team member 3 -->
+                    <div class="col-md-4">
+                        <div class="team-member text-center">
+                            <h4 class="mt-2">Nisha KC</h4>
+                            <p>Head Waitress</p>
+                            <p>
+								Nisha KC brings a smile to our guests' faces and ensures that their dining experience is exceptional,
+								with attentive service and a friendly demeanor.
+							</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section with email and phone details -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="text-center">Get in Touch</h2>
+                <p class="text-center">Have questions or want to make a reservation? Feel free to contact us!</p>
+                <p class="text-center">Email: <a href="mailto:nischalshrestha616@gmail.com">nischalshrestha616@gmail.com</a></p>
+                <p class="text-center">Phone: (+977 9866731377)</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section with contact details, quick links, and social media links -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Contact details -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: <a href="mailto:nischalshrestha616@gmail.com">nischalshrestha616@gmail</a></p>
+                    <p>Phone: (+977 9866731377)</p>
+                </div>
+                <!-- Quick links to other pages -->
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <div class="quick-links">
+                        <ul class="list-unstyled">
+                            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                            <li><a href="Nav_links/menu.html"><i class="fas fa-utensils"></i>Menu</a></li>
+                            <li><a href="Nav_links/about.html"><i class="fas fa-info-circle"></i>About Us</a></li>
+                            <li><a href="#testimonials"><i class="fas fa-star"></i>Testimonials</a></li>
+                            <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+                            <li><a href="Nav_links/signup.html"><i class="fas fa-user-plus"></i>Sign Up</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social media links -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/people/Nischal-Shrestha/pfbid02kSSKwcw9bC6w6yV15bHU8KmK73LEuwHo8fC7CYm6JNniYi17GyjvP5p9Z72GN9Lrl/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/nischalshrestha2023?igsh=MXRtMHp5MXRicTBseg=="><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Copyright notice -->
+                <div class="col-12">
+                    <p>&copy; 2024 Newa Ghasa. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery library for Bootstrap's JavaScript plugins -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js for Bootstrap's tooltips and popovers -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JavaScript for interactive components -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script for toggling between light and dark themes -->
+    <script>
+        function toggleTheme() {
+            // Get the current theme
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            // Determine the new theme
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            // Apply the new theme
+            document.documentElement.setAttribute('data-theme', newTheme);
+            // Update the theme toggle button text
+            document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? '🌙' : '🌞';
+        }
+        // Set the initial theme based on user preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const userPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', userPreference);
+            document.querySelector('.theme-toggle').textContent = userPreference === 'dark' ? '🌙' : '🌞';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+/* Define color variables for both light and dark themes */
+:root {
+    --background-light: #f8f9fa;  /* Light background color for the light theme */
+    --background-dark: #1e1e1e;   /* Dark background color for the dark theme */
+    --text-light: #f8f9fa;         /* Light text color for the light theme */
+    --text-dark: #333;             /* Dark text color for the light theme */
+    --text-dark-alt: #e0e0e0;      /* Light text color for the dark theme */
+    --accent-orange: #ff6f00;      /* Accent color used for highlights and buttons */
+    --secondary-dark: #333;        /* Secondary dark color for backgrounds in dark mode */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Light shadow color */
+    --shadow-dark: rgba(0, 0, 0, 0.3);  /* Dark shadow color */
+}
+
+/* Basic styling for the body element */
+body {
+    font-family: 'Roboto', sans-serif; /* Set the font family for the entire page */
+    color: var(--text-dark);            /* Use the dark text color */
+    background-color: var(--background-light); /* Set the background color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+}
+
+/* Styling for dark theme */
+[data-theme='dark'] {
+    --background-light: #1e1e1e; /* Dark background color for dark theme */
+    --text-dark: #e0e0e0;         /* Light text color for dark theme */
+    --text-dark-alt: #e0e0e0;     /* Alternate light text color for dark theme */
+    --secondary-dark: #121212;    /* Even darker background for sections in dark mode */
+    --shadow-light: rgba(0, 0, 0, 0.3); /* Darker shadow color for dark mode */
+    --shadow-dark: rgba(0, 0, 0, 0.5);  /* Darker shadow color for dark mode */
+}
+
+/* Navigation bar styling */
+nav.navbar {
+    background-color: var(--accent-orange); /* Orange background for the light theme */
+}
+
+nav.navbar .navbar-nav .nav-link {
+    color: var(--text-light); /* Light text color for navigation links */
+    transition: color 0.3s;  /* Smooth transition for link color changes */
+}
+
+/* Dark theme navigation bar styling */
+[data-theme='dark'] nav.navbar {
+    background-color: var(--secondary-dark); /* Dark background for the navigation bar */
+}
+
+[data-theme='dark'] nav.navbar .navbar-nav .nav-link {
+    color: var(--text-light); /* Light text color for navigation links in dark mode */
+}
+
+nav.navbar .navbar-brand {
+    color: var(--text-light); /* Light text color for the brand name */
+}
+
+/* Hero section styling */
+.hero {
+    background: url('../background/NEWAGHASA.jpg') no-repeat center center; /* Background image for the hero section */
+    background-size: cover; /* Cover the entire section with the background image */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 10rem 1rem; /* Large padding for top and bottom */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    padding: 40px 20px; /* Padding inside the overlay */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px var(--shadow-dark); /* Shadow for the overlay */
+}
+
+.hero h2 {
+    font-size: 3rem; /* Large font size for headings */
+    margin-bottom: 10px; /* Margin below the heading */
+}
+
+.hero p {
+    font-size: 1.25rem; /* Font size for paragraphs */
+    margin-bottom: 20px; /* Margin below paragraphs */
+}
+
+/* Section styling */
+.section {
+    padding: 60px 20px; /* Padding around sections */
+    color: var(--text-dark); /* Dark text color */
+    background-color: var(--background-light); /* Light background color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color changes */
+}
+
+/* Dark theme section styling */
+[data-theme='dark'] .section {
+    background-color: var(--secondary-dark); /* Dark background color for sections */
+    color: var(--text-dark-alt); /* Light text color for dark mode */
+}
+
+.section h2 {
+    color: var(--accent-orange); /* Orange color for section headings */
+    margin-bottom: 20px; /* Margin below section headings */
+}
+
+.section img {
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 6px var(--shadow-light); /* Light shadow for images */
+    margin-bottom: 20px; /* Margin below images */
+}
+
+/* Team member card styling */
+.team-member {
+    margin-bottom: 30px; /* Margin below team member cards */
+    padding: 20px; /* Padding inside the card */
+    border-radius: 8px; /* Rounded corners */
+    background-color: var(--background-light); /* Light background color */
+    color: var(--text-dark); /* Dark text color */
+    box-shadow: 0 4px 6px var(--shadow-light); /* Light shadow for the card */
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s; /* Smooth transition for background color, shadow, and text color changes */
+}
+
+/* Dark theme team member card styling */
+[data-theme='dark'] .team-member {
+    background-color: var(--secondary-dark); /* Dark background color for the card */
+    color: var(--text-dark-alt); /* Light text color for dark mode */
+    box-shadow: 0 4px 6px var(--shadow-dark); /* Darker shadow for dark mode */
+}
+
+.team-member img {
+    width: 150px; /* Fixed width for team member images */
+    height: 150px; /* Fixed height for team member images */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    border-radius: 50%; /* Circular border radius */
+    border: 3px solid var(--accent-orange); /* Orange border around the image */
+    transition: border-color 0.3s; /* Smooth transition for border color changes */
+}
+
+.team-member img:hover {
+    border-color: var(--accent-dark); /* Darker border color on hover */
+}
+
+.team-member h4 {
+    margin-top: 15px; /* Margin above team member names */
+    font-weight: 700; /* Bold font weight */
+    color: var(--accent-orange); /* Orange color for names */
+}
+
+.team-member p {
+    margin-top: 10px; /* Margin above paragraphs in team member cards */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 2rem 1rem; /* Padding inside the footer */
+}
+
+.footer h5 {
+    margin-bottom: 1rem; /* Margin below footer headings */
+}
+
+.footer a {
+    color: #ffffff; /* White text color for links */
+    transition: color 0.3s; /* Smooth transition for link color changes */
+}
+
+.footer a:hover {
+    color: #007bff; /* Change link color on hover */
+}
+
+.footer .quick-links {
+    background-color: #2c2c2c; /* Dark background for quick links section */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 1rem; /* Padding inside the quick links section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for quick links section */
+}
+
+.footer .quick-links ul {
+    padding: 0; /* Remove padding from the list */
+    margin: 0; /* Remove margin from the list */
+    list-style: none; /* Remove list styling */
+}
+
+.footer .quick-links ul li {
+    margin: 0.5rem 0; /* Margin between list items */
+}
+
+.footer .quick-links ul li a {
+    color: #e0e0e0; /* Light color for links in the quick links section */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.125rem; /* Font size for quick links */
+    display: flex; /* Flexbox layout for links */
+    align-items: center; /* Center items vertically */
+    transition: color 0.3s, padding-left 0.3s; /* Smooth transition for color and padding changes */
+}
+
+.footer .quick-links ul li a:hover {
+    color: #007bff; /* Change link color on hover */
+    padding-left: 1rem; /* Add padding to the left on hover */
+}
+
+.footer .quick-links ul li a i {
+    margin-right: 0.5rem; /* Margin between icon and text */
+    font-size: 1.25rem; /* Font size for icons */
+}
+
+.list-inline-item a {
+    color: #ffffff; /* White text color for inline list items */
+    transition: color 0.3s; /* Smooth transition for color changes */
+}
+
+.list-inline-item a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Button for toggling theme */
+.theme-toggle {
+    border: 1px solid var(--accent-orange); /* Orange border for the toggle button */
+    background-color: transparent; /* Transparent background */
+    color: var(--accent-orange); /* Orange text color */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border color changes */
+}
+
+.theme-toggle:hover {
+    color: var(--text-light); /* Light text color on hover */
+    border-color: var(--text-light); /* Change border color on hover */
+}

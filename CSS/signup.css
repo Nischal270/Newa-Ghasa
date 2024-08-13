@@ -1,0 +1,311 @@
+/* Root CSS Variables for consistent theming */
+:root {
+    --background-light: #f8f9fa; /* Light background color for default theme */
+    --background-dark: #1e1e1e; /* Dark background color for dark theme */
+    --text-light: #f8f9fa; /* Light text color for default theme */
+    --text-dark: #333; /* Dark text color for default theme */
+    --text-dark-alt: #e0e0e0; /* Alternate dark text color for dark theme */
+    --accent-orange: #ff6f00; /* Accent color for buttons and highlights */
+    --secondary-dark: #333; /* Secondary dark color for background and borders */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Light shadow for default theme */
+    --shadow-dark: rgba(0, 0, 0, 0.3); /* Dark shadow for dark theme */
+}
+
+/* Basic body styling with transitions for smooth theme changes */
+body {
+    font-family: 'Roboto', sans-serif; /* Default font for the page */
+    color: var(--text-dark); /* Default text color */
+    background-color: var(--background-light); /* Default background color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+/* Dark theme overrides */
+[data-theme='dark'] {
+    --background-light: #1e1e1e; /* Dark background for dark theme */
+    --text-dark: #e0e0e0; /* Light text color for dark theme */
+    --text-dark-alt: #e0e0e0; /* Alternate dark text color for dark theme */
+    --secondary-dark: #121212; /* Even darker background for dark theme */
+    --shadow-light: rgba(0, 0, 0, 0.3); /* Darker shadow for dark theme */
+    --shadow-dark: rgba(0, 0, 0, 0.5); /* Darker shadow for dark theme */
+}
+
+/* Navbar styling */
+nav.navbar {
+    background-color: var(--accent-orange); /* Default navbar background color */
+}
+
+nav.navbar .navbar-nav .nav-link {
+    color: var(--text-light); /* Default text color for nav links */
+    transition: color 0.3s; /* Smooth transition for link color */
+}
+
+/* Dark theme navbar styling */
+[data-theme='dark'] nav.navbar {
+    background-color: var(--secondary-dark); /* Dark background for navbar in dark theme */
+}
+
+[data-theme='dark'] nav.navbar .navbar-nav .nav-link {
+    color: var(--text-light); /* Light text color for nav links in dark theme */
+}
+
+/* Navbar brand styling */
+nav.navbar .navbar-brand {
+    color: var(--text-light); /* Light color for the brand name */
+}
+
+/* Container styling with increased width and gradient background */
+.container {
+    max-width: 900px; /* Maximum width of the container */
+    padding: 30px; /* Padding inside the container */
+    background: linear-gradient(135deg, #ff6f00, #ffb300); /* Gradient background */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 15px 30px var(--shadow-light); /* Light shadow */
+    margin-top: 50px; /* Margin on top */
+    border: 1px solid var(--accent-orange); /* Border with accent color */
+    position: relative; /* Relative positioning for the pseudo-element */
+    overflow: hidden; /* Hide overflow from pseudo-element */
+}
+
+/* Dark theme container styling */
+[data-theme='dark'] .container {
+    background: linear-gradient(135deg, #333, #555); /* Dark gradient background */
+    box-shadow: 0 15px 30px var(--shadow-dark); /* Darker shadow */
+    border: 1px solid var(--text-dark-alt); /* Border with light text color */
+}
+
+/* Decorative pseudo-element for containers */
+.container::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: 10%; /* Position from the top */
+    left: -20%; /* Position from the left */
+    width: 150%; /* Width of the pseudo-element */
+    height: 150%; /* Height of the pseudo-element */
+    background: rgba(255, 255, 255, 0.2); /* Light, semi-transparent background */
+    border-radius: 50%; /* Circular shape */
+    z-index: 0; /* Behind other content */
+    transform: rotate(-30deg); /* Rotated appearance */
+}
+
+/* Heading styling inside containers */
+.container h2 {
+    color: var(--text-light); /* Light color for headings */
+    margin-bottom: 20px; /* Margin below headings */
+    font-size: 28px; /* Font size for headings */
+    position: relative; /* Relative positioning for z-index stacking */
+    z-index: 1; /* Above the pseudo-element */
+}
+
+/* Form label styling */
+.form-group label {
+    color: var(--text-light); /* Light color for form labels */
+}
+
+/* Flexbox layout for form rows */
+.form-row {
+    display: flex; /* Flexbox display */
+    flex-wrap: wrap; /* Allow wrapping of flex items */
+    gap: 20px; /* Space between columns */
+}
+
+/* Flexbox column settings */
+.form-col {
+    flex: 1; /* Flexible width */
+    min-width: 0; /* Allow columns to shrink */
+}
+
+/* Form control styling */
+.form-control {
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid var(--text-light); /* Border color */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Inner shadow */
+    transition: all 0.3s; /* Smooth transition for all properties */
+    position: relative; /* Relative positioning for z-index stacking */
+    z-index: 1; /* Above other elements */
+}
+
+/* Form control focus state */
+.form-control:focus {
+    border-color: var(--accent-orange); /* Border color on focus */
+    box-shadow: 0 0 8px var(--accent-orange); /* Glow effect on focus */
+}
+
+/* Dark theme form control styling */
+[data-theme='dark'] .form-control {
+    background-color: #2c2c2c; /* Dark background color */
+    color: var(--text-light); /* Light text color */
+    border-color: var(--text-dark); /* Border color */
+}
+
+/* Dark theme form control focus state */
+[data-theme='dark'] .form-control:focus {
+    border-color: var(--accent-orange); /* Border color on focus */
+    box-shadow: 0 0 8px var(--accent-orange); /* Glow effect on focus */
+}
+
+/* Primary button styling */
+.btn-primary {
+    background-color: var(--accent-orange); /* Background color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 14px 28px; /* Padding inside the button */
+    font-size: 18px; /* Font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+    transition: all 0.3s; /* Smooth transition */
+    position: relative; /* Relative positioning */
+    z-index: 1; /* Above other elements */
+}
+
+/* Button hover state */
+.btn-primary:hover {
+    background-color: #e65c00; /* Darker background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Theme toggle button styling */
+.theme-toggle {
+    border: 1px solid var(--accent-orange); /* Border color */
+    background-color: transparent; /* Transparent background */
+    color: var(--accent-orange); /* Text color */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+/* Theme toggle button hover state */
+.theme-toggle:hover {
+    color: var(--text-light); /* Light color on hover */
+    border-color: var(--text-light); /* Border color on hover */
+}
+
+/* Custom select wrapper styling */
+.custom-select-wrapper {
+    position: relative; /* Relative positioning */
+    display: inline-block; /* Inline block for layout */
+    width: 100%; /* Full width */
+}
+
+/* Custom select styling */
+.custom-select {
+    display: inline-block; /* Inline block for layout */
+    width: 100%; /* Full width */
+    position: relative; /* Relative positioning */
+    background-color: var(--background-light); /* Background color */
+    border: 1px solid var(--text-light); /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the select */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s; /* Smooth transition */
+}
+
+/* Hide the native select element */
+.custom-select select {
+    display: none;
+}
+
+/* Custom select dropdown arrow styling */
+.custom-select::after {
+    content: "\f078"; /* Font Awesome down arrow */
+    font-family: 'Font Awesome 5 Free'; /* Font Awesome font */
+    font-weight: 900; /* Bold font */
+    position: absolute; /* Absolute positioning */
+    right: 10px; /* Position from the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    color: var(--text-dark); /* Arrow color */
+}
+
+/* Custom select hover state */
+.custom-select:hover {
+    border-color: var(--accent-orange); /* Border color on hover */
+    box-shadow: 0 0 8px var(--accent-orange); /* Glow effect on hover */
+}
+
+/* Custom select open state */
+.custom-select.open {
+    border-color: var(--accent-orange); /* Border color when open */
+    box-shadow: 0 0 8px var(--accent-orange); /* Glow effect when open */
+}
+
+/* Arrow color when select is open */
+.custom-select.open::after {
+    color: var(--accent-orange); /* Arrow color when open */
+}
+
+/* Custom select options container */
+.custom-select.open .custom-options {
+    display: block; /* Show options when open */
+}
+
+/* Custom options styling */
+.custom-options {
+    display: none; /* Hidden by default */
+    position: absolute; /* Absolute positioning */
+    top: 100%; /* Position below the select */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background-color: var(--background-light); /* Background color */
+    border: 1px solid var(--text-light); /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+    z-index: 10; /* Above other elements */
+}
+
+/* Custom options item styling */
+.custom-options div {
+    padding: 10px; /* Padding inside options */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Custom options item hover state */
+.custom-options div:hover {
+    background-color: var(--accent-orange); /* Background color on hover */
+    color: var(--text-light); /* Text color on hover */
+}
+
+/* Selected option styling */
+.custom-options div.selected {
+    background-color: var(--accent-orange); /* Background color for selected option */
+    color: var(--text-light); /* Text color for selected option */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #000000; /* Dark background for the footer */
+    color: #ffffff; /* White text color */
+    padding: 2rem 0; /* Padding inside the footer */
+    width: 100%; /* Full width */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Align to the bottom */
+}
+
+/* Container styling within footer */
+.footer .container {
+    max-width: none; /* No max-width */
+    width: 100%; /* Full width */
+    padding: 0 2rem; /* Padding inside the container */
+}
+
+/* Footer heading styling */
+.footer h5 {
+    margin-bottom: 1rem; /* Margin below headings */
+}
+
+/* Footer link styling */
+.footer a {
+    color: #ffffff; /* White text color for links */
+    transition: color 0.3s; /* Smooth transition for link color */
+}
+
+/* Footer link hover state */
+.footer a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Quick links background and shadow */
+.footer .quick-links {
+    background-color: #1a1a1a; /* Dark background for quick links */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 1rem; /* Padding inside quick links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+}
