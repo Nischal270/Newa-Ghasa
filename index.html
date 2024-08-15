@@ -24,9 +24,258 @@
 
     <!-- Custom CSS -->
     <style>
-  
+  /* Global Styles for the Body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0;
+            padding: 0;
+        }
 
-       
+        /* Navbar Styles */
+        nav.navbar {
+            background-color: var(--navbar-background);
+        }
+
+        nav.navbar .navbar-nav .nav-link {
+            color: var(--nav-link-color);
+            transition: color 0.3s;
+        }
+
+        /* Dark Theme Navbar Styling */
+        [data-theme='dark'] nav.navbar {
+            background-color: var(--navbar-background);
+        }
+
+        [data-theme='dark'] nav.navbar .navbar-nav .nav-link {
+            color: var(--nav-link-color);
+        }
+
+        nav.navbar .navbar-brand {
+            color: var(--brand-color);
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background: url('background/NEWAGHASA.jpg') no-repeat center center;
+            background-size: cover;
+            color: var(--hero-text-color);
+            text-align: center;
+            padding: 10rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--hero-border);
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 4rem 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .section h2 {
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+        }
+
+        /* Light Mode Section Background */
+        .section.bg-light {
+            background-color: var(--section-background-light);
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 2rem 1rem;
+        }
+
+        .footer h5 {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #007bff;
+        }
+
+        .footer .quick-links {
+            background-color: #2c2c2c;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer .quick-links ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .footer .quick-links ul li {
+            margin: 0.5rem 0;
+        }
+
+        .footer .quick-links ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.125rem;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s, padding-left 0.3s;
+        }
+
+        .footer .quick-links ul li a:hover {
+            color: #007bff;
+            padding-left: 1rem;
+        }
+
+        .footer .quick-links ul li a i {
+            margin-right: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .list-inline-item a {
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        .list-inline-item a:hover {
+            color: #007bff;
+        }
+
+        /* Primary Button Styling */
+        .btn-primary {
+            background-color: var(--button-background);
+            border-color: var(--button-background);
+            border-radius: 30px;
+            padding: 0.75rem 2rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--button-background-hover);
+            border-color: var(--button-background-hover);
+            transform: scale(1.05);
+        }
+
+        .btn-primary:focus,
+        .btn-primary:active {
+            box-shadow: none;
+            outline: none;
+        }
+
+        /* Light Mode Color Variables */
+        :root {
+            --background-color: #ffffff;
+            --text-color: #000000;
+            --navbar-background: #ff7900;
+            --brand-color: #ffffff;
+            --nav-link-color: #ffffff;
+            --nav-link-hover-color: #ffd700;
+            --hero-text-color: #ffffff;
+            --hero-border: #ffd700;
+            --section-background-light: #f8f9fa;
+            --footer-background: #333333;
+            --footer-text: #ffffff;
+            --footer-border: #ddd;
+            --button-background: #6f4f28;
+            --button-background-hover: #5a3e1c;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Dark Mode Color Variables */
+        [data-theme='dark'] {
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --navbar-background: #333333;
+            --brand-color: #ffffff;
+            --nav-link-color: #cccccc;
+            --nav-link-hover-color: #ffcc00;
+            --hero-text-color: #ffffff;
+            --hero-border: #ffcc00;
+            --section-background-light: #1c1c1c;
+            --footer-background: #444444;
+            --footer-text: #cccccc;
+            --footer-border: #555555;
+            --button-background: #6f4f28;
+            --button-background-hover: #5a3e1c;
+            --shadow-light: rgba(0, 0, 0, 0.3);
+            --shadow-dark: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Testimonials Section Styling */
+        .testimonial-item {
+            border: 1px solid var(--testimonial-border);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: var(--testimonial-background);
+            margin: 1rem 0;
+            transition: box-shadow 0.3s;
+        }
+
+        .testimonial-item:hover {
+            box-shadow: 0 4px 8px var(--shadow-light);
+        }
+
+        .testimonial-background {
+            --testimonial-background: var(--section-background-light);
+            --testimonial-border: #ddd;
+        }
+
+        [data-theme='dark'] .testimonial-item {
+            --testimonial-background: #333333;
+            --testimonial-border: #555555;
+        }
+
+        /* Cookie Banner Styling */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .cookie-banner p {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        .cookie-banner button {
+            margin-left: 20px;
+        }
+
+        
 	</style>
     <!-- Links to a custom stylesheet for additional styling -->
 </head>
@@ -85,66 +334,73 @@
                 <div class="row">
                     <!-- Each column represents a dish -->
                     <div class="col-md-4">
-                        <img src="DishPhoto/chang.jpeg" alt="Chang Picture" class="food-image">
-                        <!-- Image of the dish -->
-                        <h4 class="text-center">Chang</h4>
-                        <!-- Dish name -->
-                        <p class="text-center">
-                            Chang, a cherished Newari liquor, is a traditional fermented beverage deeply rooted in Nepal's cultural heritage. 
-                            This ancient drink, often enjoyed during festive occasions and communal gatherings, is crafted from barley, millet, 
-                            or rice. The brewing process involves fermenting these grains with a unique blend of natural ingredients, resulting in 
-                            a refreshing, slightly effervescent brew with a distinctive, earthy flavor profile. <br><br>
-                            <!-- Detailed description of the dish -->
-                            Typically served chilled in traditional Newari vessels, Chang has a cloudy appearance with a rich, frothy head. 
-                            Its taste can range from mildly sweet to tangy, depending on the specific recipe and fermentation period. This 
-                            artisanal liquor not only embodies the essence of Newari craftsmanship but also serves as a symbol of hospitality and 
-                            communal spirit in the vibrant Newar community. Whether savored in a festive setting or enjoyed in casual company, 
-                            Chang offers a genuine taste of Nepal's rich cultural tapestry.
-                        </p>
+                        <div class="menu-item-box">
+                            <img src="DishPhoto/chang.jpeg" alt="Chang Picture" class="food-image">
+                            <!-- Image of the dish -->
+                            <h4 class="text-center">Chang</h4>
+                            <!-- Dish name -->
+                            <p class="text-center">
+                                Chang, a cherished Newari liquor, is a traditional fermented beverage deeply rooted in Nepal's cultural heritage. 
+                                This ancient drink, often enjoyed during festive occasions and communal gatherings, is crafted from barley, millet, 
+                                or rice. The brewing process involves fermenting these grains with a unique blend of natural ingredients, resulting in 
+                                a refreshing, slightly effervescent brew with a distinctive, earthy flavor profile. <br><br>
+                                <!-- Detailed description of the dish -->
+                                Typically served chilled in traditional Newari vessels, Chang has a cloudy appearance with a rich, frothy head. 
+                                Its taste can range from mildly sweet to tangy, depending on the specific recipe and fermentation period. This 
+                                artisanal liquor not only embodies the essence of Newari craftsmanship but also serves as a symbol of hospitality and 
+                                communal spirit in the vibrant Newar community. Whether savored in a festive setting or enjoyed in casual company, 
+                                Chang offers a genuine taste of Nepal's rich cultural tapestry.
+                            </p>
+                        </div>
                     </div>
-
+        
                     <div class="col-md-4">
-                        <img src="DishPhoto/choila.jpeg" alt="Choila Picture" class="food-image">
-                        <!-- Image of the dish -->
-                        <h4 class="text-center">Choila</h4>
-                        <!-- Dish name -->
-                        <p class="text-center">
-                            Choila is a beloved Newari dish renowned for its vibrant flavors and rich culinary tradition. Originating from the Newar 
-                            community of Nepal, Choila is a spicy and savory preparation featuring grilled or roasted meat, commonly pork, buffalo, 
-                            or chicken, though variations with other meats can also be found. <br><br>
-                            <!-- Detailed description of the dish -->
-                            The meat is first marinated in a fragrant mix of spices, including cumin, coriander, fenugreek, and chili, then grilled to 
-                            perfection. After grilling, the meat is finely chopped and tossed with a tangy, spicy mixture of roasted spices, garlic, ginger, 
-                            and often a splash of lime or lemon juice. Fresh herbs such as cilantro or mint and sliced onions are also added to enhance 
-                            the dish's complexity and freshness.<br><br>
-                            Typically served at room temperature or slightly warm, Choila is often accompanied by traditional Newari sides like beaten rice 
-                            (chiura), pickles (achar), and sometimes a hard-boiled egg. This dish is a staple at celebrations and special occasions, celebrated 
-                            for its bold flavors and its role in bringing people together. With its tantalizing heat and robust taste, Choila is a true reflection 
-                            of Newari culinary artistry.
-                        </p>
+                        <div class="menu-item-box">
+                            <img src="DishPhoto/choila.jpeg" alt="Choila Picture" class="food-image">
+                            <!-- Image of the dish -->
+                            <h4 class="text-center">Choila</h4>
+                            <!-- Dish name -->
+                            <p class="text-center">
+                                Choila is a beloved Newari dish renowned for its vibrant flavors and rich culinary tradition. Originating from the Newar 
+                                community of Nepal, Choila is a spicy and savory preparation featuring grilled or roasted meat, commonly pork, buffalo, 
+                                or chicken, though variations with other meats can also be found. <br><br>
+                                <!-- Detailed description of the dish -->
+                                The meat is first marinated in a fragrant mix of spices, including cumin, coriander, fenugreek, and chili, then grilled to 
+                                perfection. After grilling, the meat is finely chopped and tossed with a tangy, spicy mixture of roasted spices, garlic, ginger, 
+                                and often a splash of lime or lemon juice. Fresh herbs such as cilantro or mint and sliced onions are also added to enhance 
+                                the dish's complexity and freshness.<br><br>
+                                Typically served at room temperature or slightly warm, Choila is often accompanied by traditional Newari sides like beaten rice 
+                                (chiura), pickles (achar), and sometimes a hard-boiled egg. This dish is a staple at celebrations and special occasions, celebrated 
+                                for its bold flavors and its role in bringing people together. With its tantalizing heat and robust taste, Choila is a true reflection 
+                                of Newari culinary artistry.
+                            </p>
+                        </div>
                     </div>
-
+        
                     <div class="col-md-4">
-                        <img src="DishPhoto/Supu_Mhicha.jpeg" alt="Supu Mhicha Picture" class="food-image">
-                        <!-- Image of the dish -->
-                        <h4 class="text-center">Supu Mhicha</h4>
-                        <!-- Dish name -->
-                        <p class="text-center">
-                            Supu Mhicha is a distinctive and traditional dish from the Newar cuisine of Nepal, celebrated for its unique flavor and hearty texture. 
-                            This traditional Newari delicacy features a rich, flavorful soup made from a combination of meat and vegetables, often including ingredients 
-                            like goat or buffalo meat, lentils, and a variety of aromatic spices.<br><br>
-                            <!-- Detailed description of the dish -->
-                            The preparation begins with simmering the meat and lentils together, allowing the flavors to meld and the broth to become deeply savory. 
-                            The soup is then enriched with a fragrant blend of spices such as turmeric, cumin, coriander, and fenugreek, alongside ingredients like garlic, 
-                            ginger, and sometimes tomatoes. Fresh herbs and vegetables are added to complete the dish, imparting a vibrant, robust flavor profile.<br><br>
-                            Supu Mhicha is typically enjoyed as a comforting and warming meal, often accompanied by steamed rice or traditional Newari breads. It's a popular 
-                            choice during cooler months or special occasions, embodying the essence of Newari hospitality and culinary tradition. Its satisfying, complex flavors 
-                            make it a cherished part of the Newar culinary heritage, reflecting the skill and tradition of its preparation.
-                        </p>
+                        <div class="menu-item-box">
+                            <img src="DishPhoto/Supu_Mhicha.jpeg" alt="Supu Mhicha Picture" class="food-image">
+                            <!-- Image of the dish -->
+                            <h4 class="text-center">Supu Mhicha</h4>
+                            <!-- Dish name -->
+                            <p class="text-center">
+                                Supu Mhicha is a distinctive and traditional dish from the Newar cuisine of Nepal, celebrated for its unique flavor and hearty texture. 
+                                This traditional Newari delicacy features a rich, flavorful soup made from a combination of meat and vegetables, often including ingredients 
+                                like goat or buffalo meat, lentils, and a variety of aromatic spices.<br><br>
+                                <!-- Detailed description of the dish -->
+                                The preparation begins with simmering the meat and lentils together, allowing the flavors to meld and the broth to become deeply savory. 
+                                The soup is then enriched with a fragrant blend of spices such as turmeric, cumin, coriander, and fenugreek, alongside ingredients like garlic, 
+                                ginger, and sometimes tomatoes. Fresh herbs and vegetables are added to complete the dish, imparting a vibrant, robust flavor profile.<br><br>
+                                Supu Mhicha is typically enjoyed as a comforting and warming meal, often accompanied by steamed rice or traditional Newari breads. It's a popular 
+                                choice during cooler months or special occasions, embodying the essence of Newari hospitality and culinary tradition. Its satisfying, complex flavors 
+                                make it a cherished part of the Newar culinary heritage, reflecting the skill and tradition of its preparation.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        
 
         <section id="testimonials" class="section">
             <!-- Testimonials section -->
@@ -193,7 +449,7 @@
                 </div>
             </div>
         </section>
-       
+        
     </main>
 
     <footer class="footer">
@@ -300,7 +556,7 @@
 
 
     </script>
-    <!-- JavaScript to handle theme toggling -->
+    
 </body>
 
 </html>
